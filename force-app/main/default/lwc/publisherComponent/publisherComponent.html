@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Publisher Component">
+        <lightning-input label="Message" type="text" onchange={handleChange} value={Message}></lightning-input>
+        <!-- call subscriber -->
+        <div class="slds-p-around_medium lgc-bg" style="text-align: end;">
+            <lightning-button label="Fire Event" variant="brand" onclick={handleClick}></lightning-button>
+        </div> 
+    </lightning-card>
+</template>

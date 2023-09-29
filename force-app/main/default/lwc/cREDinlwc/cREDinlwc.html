@@ -1,0 +1,13 @@
+<template>
+
+    <lightning-card title="Account Manager">
+        <template if:true={accountList}>
+            <lightning-datatable 
+                key-field="id"
+                data={accountList}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+    </lightning-card>     
+
+</template>

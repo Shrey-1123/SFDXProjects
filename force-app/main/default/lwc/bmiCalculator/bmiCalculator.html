@@ -1,0 +1,55 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div>
+        <div class="app">
+            <div class="box">
+                <h1>BMI Calculator</h1>
+              <template if:true={recalculate}>
+                <section>
+                    <div class="result">
+                        <p>Your BMI is : {bmiValue}. Your categroy is {result}</p>
+                    </div>
+                    <button class="slds-button slds-button_neutral slds-button_stretch" onclick={reset}>Re-calcullate</button>
+                </section>
+              </template>
+               <template if:false={recalculate}>
+                <form onsubmit={submitHandler}>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label slds-text-title_bold" for="text-input-height">
+                            <abbr class="slds-required" title="required">* </abbr>Height(cm)</label>
+                        <div class="slds-form-element__control">
+                            <input type="number" id="text-input-height" min="0" placeholder="Enter height in cm" required
+                                class="slds-input" name="height" value={height} onchange={inputHandler}/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label slds-text-title_bold" for="text-input-weight">
+                            <abbr class="slds-required" title="required">* </abbr>Weight(kg)</label>
+                        <div class="slds-form-element__control">
+                            <input type="number" id="text-input-weight" min="0" placeholder="Enter weight in kg" required
+                                class="slds-input" name="weight" value={weight} onchange={inputHandler}/>
+                        </div>
+                    </div>
+                    <button class="slds-button slds-button_neutral slds-button_stretch">Calculate</button>
+                </form>
+            </template>
+                <div class="info-wrapper">
+                    <h2>What your BMI means</h2>
+                    <p>Once your BMI measured you can determine your healthy weight category. If you BMI is:</p>
+                    <h3>Under 18.5</h3>
+                    <p>You are under weight</p>
+                    <h3>Between 18.5 and 24.9</h3>
+                    <p>You are healthy</p>
+                    <h3>Between 24.9 and 30</h3>
+                    <p>You are Overweight</p>
+                    <h3>Over 30</h3>
+                    <p>You are Obese</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</template>
