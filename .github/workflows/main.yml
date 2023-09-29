@@ -42,7 +42,7 @@ jobs:
           
       - name: Authenticate Salesforce ORG
         run: |
-          sfdx force:auth:jwt:grant --clientid 04ee6453-bfaa-4c82-ba72-ce38aa019b1a --jwtkeyfile assets/server.key --username shreykumarverma@gmail.com --setdefaultdevhubusername -a HubOrg
+          sfdx force:auth:jwt:grant --clientid 04ee6453-bfaa-4c82-ba72-ce38aa019b1a --jwtkeyfile asset/server.key --username shreykumarverma@gmail.com --setdefaultdevhubusername -a HubOrg
       
       - name: Validate Source Code Against Salesforce ORG
         run: |
